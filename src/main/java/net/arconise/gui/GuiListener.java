@@ -24,7 +24,6 @@ public class GuiListener implements Listener {
             p.closeInventory();
             e.setCancelled(true);
         }
-        e.setCancelled(true);
     }
 
 }
