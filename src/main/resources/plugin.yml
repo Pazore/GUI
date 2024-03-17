@@ -1,0 +1,7 @@
+name: GUI
+version: '${project.version}'
+main: net.arconise.gui.GUI
+api-version: '1.19'
+commands:
+  opengui:
+    description: asd
