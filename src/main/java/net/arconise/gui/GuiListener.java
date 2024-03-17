@@ -2,6 +2,7 @@ package net.arconise.gui;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,13 +16,15 @@ public class GuiListener implements Listener {
         Player p = (Player) e.getWhoClicked();
 
         if (e.getView().getTitle().equalsIgnoreCase("Test")) {
-        } else if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase(ChatColor.GREEN + "Diamond_Sword")) {
-            p.getInventory().addItem(new ItemStack(Material.DIAMOND_SWORD, 230));
+
+        }
+
+        if (e.getCurrentItem().getType() == Material.DIAMOND_SWORD){
+            p.getInventory().addItem(new ItemStack(Material.DIAMOND_SWORD, 74));
             p.closeInventory();
             e.setCancelled(true);
         }
         e.setCancelled(true);
-
     }
 
 }
